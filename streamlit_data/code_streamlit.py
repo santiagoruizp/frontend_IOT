@@ -27,7 +27,7 @@ def fetch_data(sortby, lastest1st, skip, limit):
     Returns:
         list: Lista de datos obtenidos del servidor en formato JSON.
     """
-    url = f'http://127.0.0.1:8000/sensordata/?sortby={sortby}&lastest1st={lastest1st}&skip={skip}&limit={limit}'
+    url = f'https://backend-iot-9v93.onrender.com/sensordata/?sortby={sortby}&lastest1st={lastest1st}&skip={skip}&limit={limit}'
     response = requests.get(url)
     if response.status_code == 200:
         return response.json()
