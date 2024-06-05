@@ -46,7 +46,7 @@ def fetch_data_measurement(measurement):
     Returns:
         list: Lista de datos obtenidos del servidor en formato JSON.
     """
-    url = f'http://127.0.0.1:8000/sensordata/measurement?measurement_name={measurement}'
+    url = f'https://backend-iot-9v93.onrender.com/sensordata/measurement?measurement_name={measurement}'
     response = requests.get(url)
     if response.status_code == 200:
         return response.json()
